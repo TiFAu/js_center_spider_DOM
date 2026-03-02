@@ -3,9 +3,12 @@
 const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
-wall.style.position = 'absolute';
-wall.style.display = 'flex';
-wall.style.justifyContent = 'center';
-wall.style.alignItems = 'center';
+const wallWidth = wall.clientWidth;
+const wallHeight = wall.clientHeight;
+const spiderWidth = spider.clientWidth;
+const spiderHeight = spider.clientHeight;
 
-spider.style.position = 'relative';
+wall.style.position = 'relative';
+spider.style.position = 'absolute';
+spider.style.left = `${(wallWidth - spiderWidth) / 2}px`;
+spider.style.top = `${(wallHeight - spiderHeight) / 2}px`;
